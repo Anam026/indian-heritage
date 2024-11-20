@@ -1,0 +1,152 @@
+.header {
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem 1rem; /* Reduced padding for a thinner header */
+  box-shadow: none;
+}
+
+.header__top-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  z-index: 999999;
+}
+
+.header__title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-900);
+  color: inherit;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease;
+  padding: 0; /* No padding to align with icons */
+  margin: 0; /* No margin to align with icons */
+  line-height: 1; /* Ensure text height is minimal */
+}
+
+.header__lg-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center icons with the title */
+  padding: 0.2rem 0; /* Reduced padding for the navbar */
+}
+
+.header__ul {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* Adjusted gap for better alignment */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__li {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-600);
+  color: inherit;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.header__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transform: perspective(100px) rotateX(0deg) rotateY(0deg);
+  transition: transform 0.3s ease, color 0.3s ease;
+  line-height: 1; /* Ensure icon text height is minimal */
+  cursor: pointer;
+}
+
+.header__link:hover {
+  color: #ff7e5f;
+  transform: perspective(100px) rotateX(15deg) rotateY(15deg);
+}
+
+.header__link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  border-radius: 20px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff7e5f;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.header__link:hover::before {
+  width: 100%;
+}
+
+.header__btn {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__hamburger {
+  display: none;
+}
+
+.header__logo-link {
+  text-decoration: none;
+}
+.typewrite > .wrap {
+  border-right: 0.08em solid inherit; /* Cursor effect */
+}
+
+.header .typewrite {
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  margin: 20px 0;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: inherit;
+  }
+}
+
+.header__dark-mode-btn {
+  width: fit-content;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.header__icon {
+  width: 40px;
+  filter: invert(100%);
+}
+
+.header__fade {
+  padding: 20px;
+  padding-top: 60px;
+  transition: padding 0.3s ease;
+  width: 100%;
+  top: 200px;
+  left: 0;
+  z-index: 1000;
+}
